@@ -7,7 +7,7 @@ import MoviesList from "../components/MoviesList";
 function MoviesPage(props) {
 
     return (
-        <div>
+        <div style={{display:"flex",alignItems:'center', flexDirection:'column'}}>
             <Header/>
             <hr/>
             <Routes>
