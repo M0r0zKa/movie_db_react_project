@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import {useSelector} from "react-redux";
-import MoviesListCard from "./MoviesListCard";
 import GenresTopBlock from "./GenresTopBlock";
 
 function MoviesList(props) {

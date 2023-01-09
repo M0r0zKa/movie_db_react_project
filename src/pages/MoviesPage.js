@@ -7,11 +7,12 @@ import MoviesList from "../components/MoviesList";
 function MoviesPage(props) {
 
     return (
-        <div style={{display:"flex",alignItems:'center', flexDirection:'column'}}>
+        <div style={{display: "flex", alignItems: 'center', flexDirection: 'column'}}>
             <Header/>
             <hr/>
             <Routes>
-                    <Route path={'/'} element={<MoviesList/>}/>
+                <Route path={'/'} element={<MoviesList/>}/>
+                <Route path={'movie'} element={<MoviesList/>}/>
             </Routes>
         </div>
     );
