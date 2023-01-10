@@ -14,7 +14,7 @@ function MoviesPage(props) {
             <Routes>
                 <Route path={'/'} element={<MoviesList/>}/>
                 <Route path={'movie'} element={<MoviesList/>}/>
-                <Route path={'movie/:id'} element={<MovieInfo/>}/>
+                <Route path={'movie/:name/:id'} element={<MovieInfo/>}/>
             </Routes>
         </div>
     );

@@ -1,8 +1,10 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 function MoviesListCard({value}) {
     // console.log(value);
+    const par =useParams()
+    console.log(par);
 
 
     return (
@@ -20,7 +22,7 @@ function MoviesListCard({value}) {
                 textAlign: 'center',
             }}>
             <img width={'200px'} height={'300px'} src={`https://image.tmdb.org/t/p/w200${value.poster_path}`}/>
-            <Link to={`movie/${value.id}`} style={{
+            <Link to={`/movie/${value.title}/${value.id}`} style={{
                 margin: '0px',
                 width: '100%',
                 height: '10%',
