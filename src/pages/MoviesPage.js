@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from "../components/Header";
-import {Route, Routes} from "react-router-dom";
+import {Route, Routes, useParams} from "react-router-dom";
 import MoviesList from "../components/MoviesList";
+import MovieInfo from "../components/MovieInfo";
 
 
 function MoviesPage(props) {
@@ -13,6 +14,7 @@ function MoviesPage(props) {
             <Routes>
                 <Route path={'/'} element={<MoviesList/>}/>
                 <Route path={'movie'} element={<MoviesList/>}/>
+                <Route path={'movie/:id'} element={<MovieInfo/>}/>
             </Routes>
         </div>
     );

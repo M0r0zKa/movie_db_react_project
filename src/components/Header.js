@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Route, Routes} from "react-router-dom";
+import {Link, Outlet, Route, Routes} from "react-router-dom";
 import MoviesList from "./MoviesList";
 
 function Header(props) {
@@ -26,10 +26,13 @@ function Header(props) {
             <div style={{
                 display: 'flex',
                 alignItems: "center",
-                justifyContent: 'space-evenly'}}>
-                <img style={{borderRadius:"50%", width:'30px',height:'30px' , marginRight:'10px'}} src={'https://s3.eu-central-1.amazonaws.com/img.hromadske.ua/posts/240690/homoneanderthalensis-reconstruction-musejpg/large.jpg'}/>
-                <h3 style={{color:'white', marginRight:'20px'}}>Войти</h3>
+                justifyContent: 'space-evenly'
+            }}>
+                <img style={{borderRadius: "50%", width: '30px', height: '30px', marginRight: '10px'}}
+                     src={'https://s3.eu-central-1.amazonaws.com/img.hromadske.ua/posts/240690/homoneanderthalensis-reconstruction-musejpg/large.jpg'}/>
+                <h3 style={{color: 'white', marginRight: '20px'}}>Войти</h3>
             </div>
+
         </div>
     );
 }

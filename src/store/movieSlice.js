@@ -13,8 +13,17 @@ export const getGenres = createAsyncThunk(
     async function () {
         const response = await fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=949e143f769d41b678bb117fb5ce5494&language=ru-RU')
         const data = await response.json()
-        console.log(data.genres);
         return data.genres
+    }
+)
+
+export const getMovieInfo = createAsyncThunk(
+    'movie/getMovieInfo',
+    async function(id,{rejectWithValue}){
+        const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=949e143f769d41b678bb117fb5ce5494&language=ru-RU`)
+        const data = await response.json()
+        console.log(data);
+        return data
     }
 )
 
@@ -22,6 +31,7 @@ const movieSlice = createSlice({
     name: 'movie',
     initialState: {
         movie: [],
+        movieInfo:{},
         genres: [],
         status: null,
         error: null
@@ -36,10 +46,14 @@ const movieSlice = createSlice({
         [getMovies.fulfilled]: (state, action) => {
             state.status = 'resolved'
             state.movie = action.payload
-            console.log(state.movie);
         },
         [getGenres.fulfilled]: (state, action) => {
             state.genres = action.payload
+        },
+        [getMovieInfo.fulfilled]: (state, action) => {
+            state.movieInfo = action.payload
+            console.log(state.movieInfo);
+
         },
     }
 })

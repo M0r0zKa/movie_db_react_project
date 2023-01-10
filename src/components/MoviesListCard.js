@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 function MoviesListCard({value}) {
-    console.log(value);
+    // console.log(value);
 
 
     return (
