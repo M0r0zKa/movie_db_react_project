@@ -33,7 +33,7 @@ function MovieInfoCard({movieInfo}) {
                     <p style={{marginTop: '5px'}}>Дата релиза: {movieInfo.release_date}</p>
                     <span><h3>Обзор</h3><p style={{margin: '2px'}}>{movieInfo.overview} </p></span>
                 </div>
-                <Rating name="half-rating" defaultValue={5 * (movieInfo.vote_average / 10)} precision={0.5} readOnly/>
+                <Rating name="half-rating" key={movieInfo.vote_average} defaultValue={5 * (movieInfo.vote_average / 10)} precision={0.5} readOnly/>
             </div>
         </div>
     );
