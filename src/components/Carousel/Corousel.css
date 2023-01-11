@@ -1,0 +1,24 @@
+.main-container {
+    height: 400px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+
+}
+
+.window {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.all-pages-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.arrow {
+    cursor: pointer;
+}

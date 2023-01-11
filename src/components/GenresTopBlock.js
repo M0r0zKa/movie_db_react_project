@@ -13,30 +13,30 @@ function GenresTopBlock({genre}) {
     }, [])
     const name = genre.name.charAt(0).toUpperCase() + genre.name.slice(1)
     return (<div style={{
-            height: '400px',
-            width: '100%',
-            marginTop: '10px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignContent: 'center',
-            flexDirection: 'column',
-            margin: 'opx',
+        height: '400px',
+        width: '100%',
+        marginTop: '10px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignContent: 'center',
+        flexDirection: 'column',
+        margin: 'opx',
 
 
+    }}>
+        <h2 style={{margin: '0px', marginLeft: '10px'}}>{name}</h2>
+        <div style={{
+            height: '400px', width: '100%', display: 'flex', justifyContent: 'center', alignContent: 'center',
         }}>
-            <h2 style={{margin: '0px', marginLeft: '10px'}}>{name}</h2>
-            <div style={{
-                height: '400px', width: '100%', display: 'flex', justifyContent: 'center', alignContent: 'center',
-            }}>
-                {topGenre.map((value, index) => {
-                    if (index <= 4) {
-                        return <MoviesListCard value={value}/>
-                    }
-                })}
+            {topGenre.map((value, index) => {
+                if (index <= 4) {
+                    return <MoviesListCard value={value}/>
+                }
+            })}
 
-            </div>
+        </div>
 
-        </div>);
+    </div>);
 }
 
 export default GenresTopBlock;

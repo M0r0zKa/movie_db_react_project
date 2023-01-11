@@ -2,10 +2,7 @@ import React from 'react';
 import {Link, useParams} from "react-router-dom";
 
 function MoviesListCard({value}) {
-    // console.log(value);
-    const par =useParams()
-    console.log(par);
-
+    const par = useParams()
 
     return (
         <div
@@ -29,7 +26,7 @@ function MoviesListCard({value}) {
                 textDecoration: 'none',
                 color: 'black',
                 fontSize: '14px',
-                fontWeight:'900'
+                fontWeight: '900'
             }}>{value.title}</Link>
 
 

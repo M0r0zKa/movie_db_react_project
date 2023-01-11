@@ -25,7 +25,7 @@ function MovieInfoCard({movieInfo}) {
                 bottom: '1%',
                 justifyContent: 'space-between',
                 color: 'white',
-                flexWrap:"nowrap"
+                flexWrap: 'nowrap'
             }}>
                 <img style={{marginLeft: '1%'}} src={`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`}/>
                 <div style={{width: '70%', marginTop: '-20px'}}>

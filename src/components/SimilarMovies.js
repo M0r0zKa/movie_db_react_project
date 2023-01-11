@@ -4,11 +4,11 @@ import MoviesListCard from "./MoviesListCard";
 function SimilarMovies({id}) {
     const [similarMovies, setSimilarMovies] = useState([])
 
-    useEffect(()=>{
-        fetch(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=949e143f769d41b678bb117fb5ce5494&language=ru&page=1`)
+    useEffect(() => {
+        fetch(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=949e143f769d41b678bb117fb5ce5494&language=ru&page=1`)
             .then(res => res.json())
             .then(value => setSimilarMovies(value.results))
-    },[id])
+    }, [id])
 
     return (
         <div>
