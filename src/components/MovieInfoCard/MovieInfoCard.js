@@ -27,7 +27,7 @@ function MovieInfoCard({movieInfo}) {
                 color: 'white',
                 flexWrap: 'nowrap'
             }}>
-                <img style={{marginLeft: '1%'}} src={`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`}/>
+                <img style={{marginLeft: '1%'}} src={`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`} alt={'dsa'}/>
                 <div style={{width: '70%', marginTop: '-20px'}}>
                     <h3 style={{marginBottom: '0px'}}>{movieInfo.title}</h3>
                     <p style={{marginTop: '5px'}}>Дата релиза: {movieInfo.release_date}</p>

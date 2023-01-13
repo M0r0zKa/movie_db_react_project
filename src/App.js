@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import MoviesPage from "./pages/MoviesPage";
-import {useDispatch, useSelector} from "react-redux";
+import HomePage from "./pages/HomePage";
+import {useDispatch } from "react-redux";
 import {getGenres, getMovies} from "./store/movieSlice";
 
 function App(props) {
@@ -11,7 +11,7 @@ function App(props) {
     },[dispatch])
     return (
         <div>
-<MoviesPage/>
+<HomePage/>
         </div>
     );
 }

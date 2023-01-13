@@ -1,9 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
+
 function Header(props) {
     return (
-        <div style={{width: '90%', background: 'rgb(9,17,8)', display: 'flex', justifyContent: 'space-between'}}>
+        <div style={{width: '1280px', background: 'rgb(9,17,8)', display: 'flex', justifyContent: 'space-between'}}>
             <Link to={'/'}><img style={{width: '100px', marginLeft: '10px'}}
                                 src={'https://seeklogo.com/images/K/kino-logo-517DBDC3FA-seeklogo.com.png'}/></Link>
             <menu style={{
