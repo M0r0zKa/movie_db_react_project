@@ -22,7 +22,6 @@ export const getMovieInfo = createAsyncThunk(
     async function(id,{rejectWithValue}){
         const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=949e143f769d41b678bb117fb5ce5494&language=ru-RU`)
         const data = await response.json()
-        console.log(data);
         return data
     }
 )
@@ -41,7 +40,6 @@ const movieSlice = createSlice({
         [getMovies.pending]: (state, action) => {
             state.status = 'Loading';
             state.error = null;
-            console.log(state.movie);
         },
         [getMovies.fulfilled]: (state, action) => {
             state.status = 'resolved'

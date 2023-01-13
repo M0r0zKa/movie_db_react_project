@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {useSelector} from "react-redux";
-import GenresTopBlock from "./GenresTopBlock";
-import Carousel from "./Carousel/Carousel";
+
+
 import {Link} from "react-router-dom";
+import {Carousel, GenresTopBlock} from "../index";
 
 function MoviesList(props) {
 
-    const {movie, genres} = useSelector(state => state.movie)
+    const {genres} = useSelector(state => state.movie)
 
     const [carousel, setCarousel] = useState([])
 
@@ -30,8 +31,8 @@ function MoviesList(props) {
                             backgroundSize: '100%',
                             backgroundPosition: '95% 20%',
                             height: "100%",
-                            minWidth: "1200px",
-                            maxWidth: '1200px',
+                            minWidth: "1270px",
+                            maxWidth: '1270px',
                             alignItems: 'end',
                             color: 'white',
                             fontSize: '50px',

@@ -1,14 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
-import MovieInfoCard from "./MovieInfoCard";
-import SimilarMovies from "./SimilarMovies";
-import Comments from "./Comments";
+import {Comments, MovieInfoCard, SimilarMovies} from "../index";
 
 function MovieInfo() {
 
-    // const [genres, setGenres] = useState([])
     const {id} = useParams()
-
 
     const [movieInfo, setMovieInfo] = useState([])
 
@@ -21,7 +17,7 @@ function MovieInfo() {
 
     return (<div style={{width: '90%', position: 'relative'}}>
         {
-            movieInfo.map(value => <MovieInfoCard movieInfo={value}/>)
+            movieInfo.map(value => <MovieInfoCard  movieInfo={value}/>)
         }
         {
             <SimilarMovies id={id}/>

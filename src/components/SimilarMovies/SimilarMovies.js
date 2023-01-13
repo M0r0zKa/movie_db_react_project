@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import MoviesListCard from "./MoviesListCard";
 
+import {MoviesListCard} from "../index";
 function SimilarMovies({id}) {
     const [similarMovies, setSimilarMovies] = useState([])
 
@@ -14,12 +14,13 @@ function SimilarMovies({id}) {
         <div>
             <h3> Смотреть ещё</h3>
             <div style={{
-                height: '400px', width: '100%', display: 'flex', justifyContent: 'center', alignContent: 'center',
+                height: '273px', width: '100%', display: 'flex', justifyContent: 'center', alignContent: 'center',
             }}>
                 {similarMovies.map((value, index) => {
-                    if (index <= 4) {
+                    if (index <= 5) {
                         return <MoviesListCard value={value}/>
                     }
+
                 })}
 
             </div>
@@ -27,4 +28,4 @@ function SimilarMovies({id}) {
     );
 }
 
-export default SimilarMovies;
+export {SimilarMovies};

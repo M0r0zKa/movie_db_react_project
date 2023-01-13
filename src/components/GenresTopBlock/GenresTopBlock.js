@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import MoviesListCard from "./MoviesListCard";
+import {MoviesListCard} from "../index";
+
 
 function GenresTopBlock({genre}) {
     const [topGenre, setTopGenre] = useState([])
@@ -11,6 +12,7 @@ function GenresTopBlock({genre}) {
                 setTopGenre(value.results)
             })
     }, [])
+
     const name = genre.name.charAt(0).toUpperCase() + genre.name.slice(1)
     return (<div style={{
         height: '400px',
@@ -21,16 +23,14 @@ function GenresTopBlock({genre}) {
         alignContent: 'center',
         flexDirection: 'column',
         margin: 'opx',
-
-
     }}>
-        <h2 style={{margin: '0px', marginLeft: '10px'}}>{name}</h2>
+        <h2 style={{margin: '0px', marginLeft: '10px', marginBottom:'3px'}}>{name}</h2>
         <div style={{
             height: '400px', width: '100%', display: 'flex', justifyContent: 'center', alignContent: 'center',
         }}>
             {topGenre.map((value, index) => {
-                if (index <= 4) {
-                    return <MoviesListCard value={value}/>
+                if (index <= 5) {
+                    return <MoviesListCard key={value.id} value={value}/>
                 }
             })}
 

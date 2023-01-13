@@ -1,8 +1,6 @@
 import React from 'react';
 
 function Comment({comment}) {
-    console.log(comment)
-
     return (
         <div style={{marginTop:'20px', padding:'10px'}}>
             <div>

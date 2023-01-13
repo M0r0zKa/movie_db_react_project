@@ -1,6 +1,5 @@
 import React from 'react';
-import {Link, Outlet, Route, Routes} from "react-router-dom";
-import MoviesList from "./MoviesList";
+import {Link} from "react-router-dom";
 
 function Header(props) {
     return (
