@@ -15,7 +15,7 @@ function MovieInfo() {
 
     }, [id])
 
-    return (<div style={{width: '90%', position: 'relative'}}>
+    return (<div style={{width: '1280px', position: 'relative'}}>
         {
             movieInfo.map(value => <MovieInfoCard  movieInfo={value}/>)
         }

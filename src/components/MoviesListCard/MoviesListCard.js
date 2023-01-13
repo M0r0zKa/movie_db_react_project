@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, { useMemo, useState} from 'react';
 import {Link} from "react-router-dom";
 import {StarsRating} from "../index";
 
@@ -25,7 +25,7 @@ function MoviesListCard({value}) {
     const onMouseOver = () => {
         const newStyle = {
             margin: '10px',
-            boxShadow: "4px 4px 6px  rgba(0, 0, 0, .6)",
+            boxShadow: "4px 4px 6px  rgba(0, 0, 0, .5)",
             height: '350px',
         }
         setStyle({...style, ...newStyle})
@@ -51,7 +51,7 @@ function MoviesListCard({value}) {
             }}
             style={{
                 display: "flex",
-                flexDirection: "column",
+                justifyContent:"space-evenly",
                 width: "auto",
                 height: 'auto',
                 textDecoration: 'none',
@@ -61,7 +61,7 @@ function MoviesListCard({value}) {
             <div
                 style={style}>
                 <div style={{
-                    background: 'rgba(0, 0, 0, .6)',
+                    background: 'rgba(0, 0, 0, .3)',
                     width: '100%',
                     height: '8%'
                 }}>
