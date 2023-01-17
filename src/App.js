@@ -1,12 +1,12 @@
-import React, {useEffect} from 'react';
+import React, {useMemo} from 'react';
 import HomePage from "./pages/HomePage";
 import {useDispatch } from "react-redux";
-import {getGenres, getMovies} from "./store/movieSlice";
+import {getGenres} from "./store/movieSlice";
 
-function App(props) {
+function App() {
+
     const dispatch = useDispatch()
-    useEffect(()=>{
-        dispatch(getMovies())
+    useMemo(()=>{
         dispatch(getGenres())
     },[dispatch])
     return (

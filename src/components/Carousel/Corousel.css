@@ -10,6 +10,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
+
 }
 
 .all-pages-container {
@@ -21,4 +22,5 @@
 
 .arrow {
     cursor: pointer;
+
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
 import {Header, MovieInfo, MoviesList} from "../components";
+import MoviePage from "./MoviePage";
 
 
 
@@ -12,7 +13,7 @@ function HomePage() {
         <hr/>
         <Routes>
             <Route path={'/'} element={<MoviesList/>}/>
-            <Route path={'movie'} element={<MoviesList/>}/>
+            <Route path={'movie/page/:page'} element={<MoviePage/>}/>
             <Route path={'movie/:name/:id'} element={<MovieInfo/>}/>
         </Routes>
     </div>);

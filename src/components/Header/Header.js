@@ -2,7 +2,10 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 
-function Header(props) {
+function Header() {
+
+
+
     return (
         <div style={{width: '1280px', background: 'rgb(9,17,8)', display: 'flex', justifyContent: 'space-between'}}>
             <Link to={'/'}><img style={{width: '100px', marginLeft: '10px'}}
@@ -17,7 +20,7 @@ function Header(props) {
                 textDecoration: 'none'
             }}>
                 <span><Link style={{textDecoration: 'none', color: 'white'}} to={'/'}>Домой</Link></span>
-                <span><Link style={{textDecoration: 'none', color: 'white'}} to={'movie'}>Фильмы</Link></span>
+                <span><Link style={{textDecoration: 'none', color: 'white'}} to={`movie/page/1`}>Фильмы</Link></span>
                 <span><Link style={{textDecoration: 'none', color: 'white'}} to={'tv'}>ТВ Шоу</Link></span>
             </menu>
             <form style={{display: 'flex', alignItems: 'center', marginRight: '20px'}}>

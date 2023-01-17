@@ -6,7 +6,7 @@ import {FaChevronLeft, FaChevronRight} from "react-icons/fa";
 function Carousel({children}) {
 
 
-    const PAGE_WIDTH = 1270
+    const PAGE_WIDTH = 1280
 
     const [offset, setOffset] = useState(0)
 
